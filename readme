@@ -5,4 +5,4 @@ create autonomy package
 openni package
 ORB SLAM 2
 
-it also requires some nodes running on a second computer (Raspberry pi)
+It also requires some nodes running on a second computer (Raspberry pi).
