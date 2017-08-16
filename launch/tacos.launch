@@ -1,0 +1,23 @@
+<launch>
+
+	<group>
+	<include file= "$(find usb_cam)/launch/camara.launch"/>
+	<include file= "$(find RISSA)/launch/rostros.launch"/>
+  	</group>
+
+	<group>
+	<include file= "$(find pocketsphinx)/demo/rissa.launch"/>
+  	</group>
+
+	<group>
+	<include file= "$(find sound_play)/launch/audio.launch"/>
+  	</group>
+
+	<group>
+	<include file= "$(find ca_driver)/launch/create_2.launch"/>
+  	</group>
+
+	<group>
+	<include file= "$(find RISSA)/launch/launsh_tacos.launch"/>
+  	</group>
+</launch>

@@ -1,0 +1,14 @@
+<launch>
+
+<!-- Mando_brazos -->
+  <node name="tacos" pkg="RISSA" type="tacos.py" output="screen">
+  </node>
+
+
+<!-- pi ROSTROS -->
+
+  <node  pkg="RISSA" type="pi_rostros.sh" name="pi" output="screen">
+  </node>    
+
+
+</launch>

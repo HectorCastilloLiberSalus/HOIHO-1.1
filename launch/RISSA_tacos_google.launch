@@ -1,0 +1,39 @@
+<launch>
+ <!-- camara -->
+
+  <node pkg="usb_cam" name="usb_cam_node"  type="usb_cam_node" output="screen">
+   <remap from="usb_cam_node/image_raw" to="camera/image_raw"/>
+  </node>
+
+  <!-- asegurar nodo server -->
+
+  <node  pkg="RISSA" type="face.sh" name="face"/>
+
+  <node pkg="face_recognition" type="Fclient" name="Fclient"/>
+
+  <!-- Visualizacion-->
+  
+   <node  pkg="RISSA" type="imagen.py" name="imagen" output="screen"/>
+
+
+<!-- Mando_brazos -->
+  <node name="tts" pkg="RISSA" type="hablar.py" output="screen">
+  </node>
+
+<!-- Mando_brazos -->
+  <node name="tacos" pkg="RISSA" type="tacos_google.py" output="screen">
+  </node>
+
+  <!-- cantar -->
+  <node  pkg="RISSA" type="cancion.py" name="cancion" output="screen"/>
+
+<!-- cantar2-->
+
+  <node  pkg="RISSA" type="cantar.sh" name="cantar" output="screen"/>
+
+<!-- Voz-->
+
+  <node  pkg="RISSA" type="Reconocedor.py" name="Reconocer_voz" output="screen"/>
+
+
+</launch>

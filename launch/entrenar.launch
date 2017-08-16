@@ -1,0 +1,21 @@
+<launch>
+ <!-- camara -->
+
+  <node pkg="usb_cam" name="usb_cam_node"  type="usb_cam_node" output="screen">
+   <remap from="usb_cam_node/image_raw" to="camera/image_raw"/>
+  </node>
+ 
+  <node  pkg="image_view" type="image_view" name="image_view" output="screen">
+   <remap from="image" to="camera/image_raw"/>
+  </node>
+     
+  <!-- asegurar nodo server -->
+
+  <node  pkg="RISSA" type="face.sh" name="face" output="screen"/>
+
+  <node pkg="face_recognition" type="Fclient" name="Fclient" output="screen"/>
+
+  <!-- Iniciar reconocedor -->
+  <node  pkg="RISSA" type="entrenar_reconocedor.sh" name="entrenar_reconocedor" output="screen"/>
+
+</launch>

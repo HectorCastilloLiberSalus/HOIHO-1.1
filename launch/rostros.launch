@@ -1,0 +1,21 @@
+<launch>
+
+
+  <!-- asegurar nodo server -->
+
+  <node  pkg="RISSA" type="face.sh" name="face"/>
+
+  <node pkg="face_recognition" type="Fclient" name="Fclient"/>
+
+  <!-- Visualizacion-->
+  
+   <node  pkg="RISSA" type="imagen.py" name="imagen"/>
+
+  <!-- pausa -->
+  <node  pkg="RISSA" type="pausa.sh" name="pausa"/>
+
+  <!-- Iniciar reconocedor -->
+  <node  pkg="RISSA" type="iniciar_reconocedor.sh" name="iniciar_reconocedor1" output="screen"/>
+
+
+</launch>

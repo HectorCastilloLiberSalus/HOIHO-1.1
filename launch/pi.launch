@@ -1,0 +1,4 @@
+<launch>
+  <node  pkg="RISSA" type="pi.sh" name="pi" output="screen">
+  </node>
+</launch>
