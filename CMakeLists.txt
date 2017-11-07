@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 2.8.3)
-project(RISSA)
+project(hoiho)
 
 ## Add support for C++11, supported in ROS Kinetic and newer
 # add_definitions(-std=c++11)
@@ -112,7 +112,7 @@ find_package(catkin REQUIRED COMPONENTS
 ## DEPENDS: system dependencies of this project that dependent projects also need
 catkin_package(
 #  INCLUDE_DIRS include
-#  LIBRARIES RISSA
+#  LIBRARIES hoiho
   CATKIN_DEPENDS message_runtime roscpp std_msgs actionlib rospy roslib actionlib_msgs sensor_msgs cv_bridge image_transport
 #  DEPENDS system_lib
 )
